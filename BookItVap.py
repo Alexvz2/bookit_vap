@@ -1,6 +1,7 @@
-# 
-#
-#
+# Purpose: This File containes the functions needed to generate and qunatify the
+#          access points connections to the physical routers
+# Date: 27/01/19
+# Author: Alex Vazquez
 # bssid unqie to router
 # DA is mac address 6  octects
 # SA source adress
@@ -8,7 +9,6 @@
 
 
 import subprocess
-import time
 
 
 def First_Time():
@@ -22,8 +22,7 @@ def Initialize(deviceNum):
     return True
 
 
-def Get_Traffic(deviceNum, tim):
+def import_Traffic(deviceNum, tim):
     file_ = open("ouput.txt", "w")
     subprocess.Popen([" timeout %i sudo tcpdump -i wlan%dmon -e" % (tim, deviceNum)], stdout=file_)
-
-    return
+    pass
