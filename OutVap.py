@@ -5,3 +5,12 @@ from BookItVap import *
 import time
 import string
 import multiprocessing
+
+
+def uplaod_traffic(arg):
+    pass
+
+if __name__ == "__main__":
+    upload_traffic()
+    return True
+    
