@@ -9,6 +9,7 @@
 
 
 import subprocess
+import string
 
 
 def First_Time():
@@ -25,4 +26,10 @@ def Initialize(deviceNum):
 def import_Traffic(deviceNum, tim):
     file_ = open("ouput.txt", "w")
     subprocess.Popen([" timeout %i sudo tcpdump -i wlan%dmon -e" % (tim, deviceNum)], stdout=file_)
+    pass
+
+def string_count(arg):
+    file_ = open("output.txt, "r")
+    MAC_Address = re.findall(('(?:[0-9a-fA-F]{1,}(?:\-|\:)){5}[0-9a-fA-F]{1,}'), addresses)
+    file_.write(MAC_Address)
     pass
